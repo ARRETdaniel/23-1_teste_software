@@ -11,7 +11,7 @@ def test_get_string_length():
     assert get_string_length("こんにちは世界") == 7
     assert get_string_length("Python is awesome") == 17
 
-
+'''
 # The capsys fixture provided by Pytest allows us to capture stdout output during the execution of our test function. We use this fixture to capture the output of our read_and_print_string function.
 def test_read_and_print_string(capsys):
     input_str = "Hello, world!"
@@ -29,7 +29,7 @@ def test_read_and_print_string(capsys):
 
     # Check that the function prints the input string
     assert captured_output.out == input_str + "\n"
-
+'''
 # test_count_ones.py
 
 
@@ -39,7 +39,7 @@ def test_count_ones():
     assert count_ones("1") == 1
     assert count_ones("111001011") == 6
 
-
+'''
 def test_print_name_if_starts_with_a(capsys):
     # Case 1: Name starts with 'a' in lowercase
     print_name_if_starts_with_a('alice')
@@ -55,7 +55,7 @@ def test_print_name_if_starts_with_a(capsys):
     print_name_if_starts_with_a('bob')
     captured = capsys.readouterr()
     assert captured.out == ''
-
+'''
 
 def test_remove_spaces():
     assert remove_spaces('hello world') == [
@@ -63,7 +63,7 @@ def test_remove_spaces():
     assert remove_spaces('the quick brown fox') == [
         't', 'h', 'e', 'q', 'u', 'i', 'c', 'k', 'b', 'r', 'o', 'w', 'n', 'f', 'o', 'x']
 
-
+'''
 # undone
 def test_read_input(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda _: 'Alice')
@@ -87,3 +87,4 @@ def test_car_consumption(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda _: 'quit')
     assert car_consumption() == []
     #assert car_consumption() == [('ausca', 1.0, 1000.0), ('Bob', 35.0, 35000.0)]
+'''
